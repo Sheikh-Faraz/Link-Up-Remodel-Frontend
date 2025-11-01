@@ -37,7 +37,7 @@ export default function HomePage() {
         </div>
 
         {/* Chat Area */}
-        <div className={`my-4 mr-2 flex-1 overflow-hidden ${!isChatOpen ? "hidden md:block" : "block"}`}>
+        <div className={`my-4 mx-2 flex-1 overflow-hidden ${!isChatOpen ? "hidden md:block" : "block"}`}>
           <div className="h-full ">
             {/* Chat content */}
             {!selectedUser ? <NoChatSelected /> : <ChatContainer />}

@@ -9,7 +9,7 @@ import ProfileSidebar from "./Profile-Sidebar";
 
 export default function ChatHeader() {
   
-  const { selectedUser, onlineUsers, authUser ,blockUser, unblockUser, deleteUser, clearChat, chatOpen } = useChat();
+  const { selectedUser, onlineUsers, authUser ,blockUser, unblockUser, deleteUser, clearChat, chatOpen, selectUser } = useChat();
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -28,7 +28,10 @@ export default function ChatHeader() {
       <div className="flex items-center space-x-3">
 
       <button
-          onClick={() => chatOpen(false)}
+          onClick={() => {
+            chatOpen(false);
+            selectUser(null);
+          }}
           className="lg:hidden text-sm p-1 text-gray-400 border rounded-md hover:bg-muted"
       >
             <ArrowLeft className="size-5 max-[425px]:size-4" />
