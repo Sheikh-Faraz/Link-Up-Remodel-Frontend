@@ -36,7 +36,7 @@ export default function RestoreContactPage () {
 
 
                   {/* Chat Area */}
-                          <div className={`flex-1 my-4 mr-2 w-full overflow-hidden ${!isChatOpen ? "hidden md:block" : "block"}`}>
+                          <div className={`flex-1 my-4 mx-2 w-full overflow-hidden ${!isChatOpen ? "hidden md:block" : "block"}`}>
                             
                             <div className="h-full relative">
                   

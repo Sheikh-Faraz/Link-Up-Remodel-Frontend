@@ -10,7 +10,7 @@ import { useEffect } from "react";
 
 export default function RestoreChatContainer() {
 
-    const { selectedUser, authUser, restoreUser, unblockUser, checkAuth, chatOpen } = useChat();
+    const { selectedUser, authUser, restoreUser, unblockUser, checkAuth, chatOpen, selectUser } = useChat();
 
     useEffect(() => {
       checkAuth();
@@ -28,7 +28,10 @@ export default function RestoreChatContainer() {
             <div className="flex items-center gap-4 max-[286px]:flex-col max-[286px]:items-start">
 
                 <button
-                  onClick={() => chatOpen(false)}
+                  onClick={() => {
+                    chatOpen(false);
+                    selectUser(null);
+                  }}
                   className="lg:hidden text-sm p-1 text-gray-400 border rounded-md hover:bg-muted"
                 >
                   <ArrowLeft className="size-5 max-[425px]:size-4" />

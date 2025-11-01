@@ -11,7 +11,7 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
 
-  const { hsToggle } = useChat();
+  const { hsToggle, selectedUser } = useChat();
 
   return (
     <div className="flex flex-col lg:flex-row max-lg:overflow-hidden">
@@ -22,7 +22,8 @@ export default function MainLayout({
 
       <main className="flex-1">{children}</main>
 
-      {!hsToggle && 
+      {/* {!hsToggle &&  */}
+      {!selectedUser && 
         <div className="block lg:hidden">
           <HorizontalSidebarLocked />
         </div>
